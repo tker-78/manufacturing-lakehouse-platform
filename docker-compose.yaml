@@ -1,9 +1,10 @@
 services:
   db:
     image: postgres:17
+    working_dir: /app
     volumes:
       - db-data:/var/lib/postgresql/data
-      - ./datasets:/datasets
+      - .:/app
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
