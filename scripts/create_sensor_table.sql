@@ -1,4 +1,8 @@
-create table if not exists sensor (
+create schema if not exists raw;
+
+set search_path TO raw;
+
+create table if not exists raw.sensor (
     timestamp TEXT,
     machine_id TEXT,
     temperature TEXT,

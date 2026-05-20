@@ -27,3 +27,12 @@ Kaggleなどの現実的な業務データを入力とし、
 
 
 
+## 環境構築
+
+```
+docker compose up -d
+```
+
+```
+docker compose exec db /app/scripts/load.sh
+```
