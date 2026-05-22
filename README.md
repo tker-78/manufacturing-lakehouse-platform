@@ -104,3 +104,11 @@ docker compose up -d
 ```
 docker compose exec db /app/scripts/load.sh
 ```
+
+```
+docker compose run --rm dbt dbt init
+```
+
+```
+docker compose run --rm dbt dbt debug
+```
