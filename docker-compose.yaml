@@ -13,11 +13,13 @@ services:
       - "5432:5432"
   dbt:
     build: .
+    working_dir: /app/manufacturing_lakehouse_platform
     environment:
-      PYTHONPATH: /app
+      PYTHONPATH: /app/manufacturing_lakehouse_platform
     depends_on:
       - db
     volumes:
       - ./:/app
+      - ~/.dbt:/root/.dbt
 volumes:
   db-data:
