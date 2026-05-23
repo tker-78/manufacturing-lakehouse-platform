@@ -1,0 +1,46 @@
+version: 2
+
+models:
+  - name: stg_sensor
+    columns:
+      - name: timestamp
+        tests:
+          - not_null
+      - name: machine_id
+        tests:
+          - not_null
+      - name: temperature
+        tests:
+          - not_null
+      - name: vibration
+        tests:
+          - not_null
+      - name: humidity
+        tests:
+          - not_null
+      - name: pressure
+        tests:
+          - not_null
+      - name: energy_consumption
+        tests:
+          - not_null
+  - name: stg_evaluation
+    columns:
+      - name: machine_status
+        tests:
+          - not_null
+      - name: anomaly_flag
+        tests:
+          - not_null
+      - name: predicted_remaining_life
+        tests:
+          - not_null
+      - name: failure_type
+        tests:
+          - not_null
+      - name: downtime_risk
+        tests:
+          - not_null
+      - name: maintenance_required
+        tests:
+          - not_null
