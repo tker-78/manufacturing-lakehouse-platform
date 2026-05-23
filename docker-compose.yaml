@@ -14,9 +14,9 @@ services:
   dbt:
     build: .
     user: "${UID}:${GID}"
-    working_dir: /app/manufacturing_lakehouse_platform
+    working_dir: /app/dbt
     environment:
-      PYTHONPATH: /app/manufacturing_lakehouse_platform
+      PYTHONPATH: /app/dbt
       HOME: /home
     depends_on:
       - db
