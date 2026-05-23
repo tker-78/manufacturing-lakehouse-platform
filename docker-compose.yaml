@@ -13,6 +13,7 @@ services:
       - "5432:5432"
   dbt:
     build: .
+    user: "${UID}:${GID}"
     working_dir: /app/manufacturing_lakehouse_platform
     environment:
       PYTHONPATH: /app/manufacturing_lakehouse_platform
