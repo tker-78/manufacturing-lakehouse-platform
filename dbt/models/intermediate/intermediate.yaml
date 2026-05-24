@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: stg_sensor
+  - name: int_sensor
     columns:
       - name: timestamp
         tests:
@@ -10,10 +10,6 @@ models:
         tests:
           - not_null
       - name: temperature
-        tests:
-          - not_null
-          - non_negative
-      - name: vibration
         tests:
           - not_null
       - name: humidity
@@ -28,6 +24,14 @@ models:
         tests:
           - not_null
           - non_negative
+  - name: int_evaluation
+    columns:
+      - name: timestamp
+        tests:
+          - not_null
+      - name: machine_id
+        tests:
+          - not_null
       - name: machine_status
         tests:
           - not_null
@@ -46,3 +50,8 @@ models:
       - name: maintenance_required
         tests:
           - not_null
+
+
+
+
+
