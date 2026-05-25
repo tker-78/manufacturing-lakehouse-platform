@@ -16,6 +16,10 @@ models:
       - name: machine_id
         tests:
           - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_machine')
+                field: machine_id
       - name: temperature
         tests:
           - not_null
